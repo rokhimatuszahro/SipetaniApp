@@ -3,9 +3,32 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/titleBar</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:datePickerDialogTheme">@style/DialogTheme</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/titleBar</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/titleBar</item>
+    </style>
+
+    <!-- Base application theme no action bar -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogThemeNoActionBar</item>
+    </style>
+
+    <style name="AlertDialogThemeNoActionBar" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/titleBar</item>
     </style>
 
 </resources>
