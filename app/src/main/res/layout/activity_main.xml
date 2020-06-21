@@ -4,15 +4,172 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bggradient"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btncolor"
+            android:text="Login"
+            android:textColor="@color/colorHint"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/wrapperLogpass"
+            app:layout_constraintStart_toStartOf="@+id/wrapperLogpass"
+            app:layout_constraintTop_toBottomOf="@+id/wrapperLogpass" />
+
+        <EditText
+            android:id="@+id/Log_email"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/roundedcorner"
+            android:gravity="center"
+            android:hint="SIPetani@gmail.com"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="@color/colorHint"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39999998" />
+
+        <TextView
+            android:id="@+id/lpPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:text="Lupa Password?"
+            android:textColor="@color/endColor"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+            app:layout_constraintStart_toStartOf="@+id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <TextView
+            android:id="@+id/akun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:text="Buat Akun Baru!"
+            android:textColor="@color/endColor"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/lpPass"
+            app:layout_constraintStart_toStartOf="@+id/lpPass"
+            app:layout_constraintTop_toBottomOf="@+id/lpPass" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wrapperLogpass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/Log_email"
+            app:layout_constraintStart_toStartOf="@+id/Log_email"
+            app:layout_constraintTop_toBottomOf="@+id/Log_email"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Log_pass"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/roundedcorner"
+                android:gravity="center"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColorHint="@color/colorHint"
+                android:textSize="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/selamatDatang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Selamat Datang"
+            android:textColor="@color/colorWhite"
+            android:textSize="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/logo"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.16000003" />
+
+        <TextView
+            android:id="@+id/Sip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="SIP"
+            android:textColor="@color/endColor"
+            android:textSize="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/di"
+            app:layout_constraintStart_toEndOf="@+id/di"
+            app:layout_constraintTop_toTopOf="@+id/di" />
+
+        <TextView
+            android:id="@+id/etani"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="etani"
+            android:textColor="@color/colorWhite"
+            android:textSize="21dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Sip"
+            app:layout_constraintStart_toEndOf="@+id/Sip"
+            app:layout_constraintTop_toTopOf="@+id/Sip" />
+
+        <TextView
+            android:id="@+id/di"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="di"
+            android:textColor="@color/colorWhite"
+            android:textSize="21dp"
+            app:layout_constraintStart_toStartOf="@+id/selamatDatang"
+            app:layout_constraintTop_toBottomOf="@+id/selamatDatang" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Developer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By GoldenEagle Team"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/akun"
+            app:layout_constraintVertical_bias="0.8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
