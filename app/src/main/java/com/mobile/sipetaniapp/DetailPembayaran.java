@@ -17,6 +17,9 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.mobile.sipetaniapp.Helper.SharedPreferenceHelper;
+import com.mobile.sipetaniapp.Until.AppController;
+import com.mobile.sipetaniapp.Until.ServerAPI;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -166,7 +169,7 @@ public class DetailPembayaran extends AppCompatActivity {
                                 dialog.setPositiveButton("Lanjut", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        startActivity(new Intent(DetailPembayaran.this, DetailPemesanan.class));
+                                        startActivity(new Intent(DetailPembayaran.this, com.mobile.sipetaniapp.DetailPemesanan.class));
                                         finish();
                                     }
                                 });

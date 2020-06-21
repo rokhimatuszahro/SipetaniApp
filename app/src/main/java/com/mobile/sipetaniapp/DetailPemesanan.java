@@ -1,4 +1,4 @@
-package com.mobile.sipetani;
+package com.mobile.sipetaniapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,9 +22,15 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.mobile.sipetani.Helper.SharedPreferenceHelper;
-import com.mobile.sipetani.Until.AppController;
-import com.mobile.sipetani.Until.ServerAPI;
+import com.mobile.sipetaniapp.Helper.SharedPreferenceHelper;
+import com.mobile.sipetaniapp.Until.AppController;
+import com.mobile.sipetaniapp.Until.ServerAPI;
+import com.mobile.sipetaniapp.Helper.SharedPreferenceHelper;
+import com.mobile.sipetaniapp.MainActivity;
+import com.mobile.sipetaniapp.Navigation;
+import com.mobile.sipetaniapp.R;
+import com.mobile.sipetaniapp.Until.AppController;
+import com.mobile.sipetaniapp.Until.ServerAPI;
 
 import org.json.JSONException;
 import org.json.JSONObject;

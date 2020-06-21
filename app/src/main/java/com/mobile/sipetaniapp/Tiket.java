@@ -1,4 +1,4 @@
-package com.mobile.sipetani;
+package com.mobile.sipetaniapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +22,12 @@ import com.mobile.sipetani.Model.DataModel;
 import com.mobile.sipetani.Helper.SharedPreferenceHelper;
 import com.mobile.sipetani.Until.AppController;
 import com.mobile.sipetani.Until.ServerAPI;
+import com.mobile.sipetaniapp.Adapter.TiketAdapter;
+import com.mobile.sipetaniapp.Helper.SharedPreferenceHelper;
+import com.mobile.sipetaniapp.Model.DataModel;
+import com.mobile.sipetaniapp.R;
+import com.mobile.sipetaniapp.Until.AppController;
+import com.mobile.sipetaniapp.Until.ServerAPI;
 
 import org.json.JSONArray;
 import org.json.JSONException;
