@@ -1,9 +1,337 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     tools:context=".DetailPembayaran">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/jumbotron"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/detailpembayaran"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailPembayaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="Detail Pembayaran"
+            android:textColor="@color/colorBlack"
+            android:textSize="21dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiket"
+            android:textColor="@color/titleBar"
+            android:textSize="21dp"
+            app:layout_constraintEnd_toEndOf="@+id/detailPembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/detailPembayaran" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDetailPembayaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="40dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/jumbotron"
+            app:layout_constraintStart_toStartOf="@+id/jumbotron"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tglPemesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Pemesanan"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis1"
+                    app:layout_constraintStart_toStartOf="@+id/garis1"
+                    app:layout_constraintTop_toBottomOf="@+id/formPemesanana3" />
+
+                <TextView
+                    android:id="@+id/isiTglBerkunjung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="21 - Apr - 2020"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis1"
+                    app:layout_constraintEnd_toEndOf="@+id/garis1"
+                    app:layout_constraintTop_toBottomOf="@+id/formPemesanana3" />
+
+                <View
+                    android:id="@+id/garis1"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/formPemesanana3" />
+
+                <TextView
+                    android:id="@+id/jumlahTiket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Tiket"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis2"
+                    app:layout_constraintStart_toStartOf="@+id/garis2"
+                    app:layout_constraintTop_toBottomOf="@+id/garis1" />
+
+                <TextView
+                    android:id="@+id/isiJumTiket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="2 Tiket"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis2"
+                    app:layout_constraintEnd_toEndOf="@+id/garis2"
+                    app:layout_constraintTop_toBottomOf="@+id/garis1" />
+
+                <View
+                    android:id="@+id/garis2"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="@+id/garis1"
+                    app:layout_constraintStart_toStartOf="@+id/garis1"
+                    app:layout_constraintTop_toBottomOf="@+id/garis1" />
+
+                <TextView
+                    android:id="@+id/totalPembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Pembayaran"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis3"
+                    app:layout_constraintStart_toStartOf="@+id/garis3"
+                    app:layout_constraintTop_toBottomOf="@+id/garis2" />
+
+                <TextView
+                    android:id="@+id/isiTotPembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="IDR. 24.000"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis3"
+                    app:layout_constraintEnd_toEndOf="@+id/garis3"
+                    app:layout_constraintTop_toBottomOf="@+id/garis2" />
+
+                <View
+                    android:id="@+id/garis3"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="@+id/garis2"
+                    app:layout_constraintStart_toStartOf="@+id/garis2"
+                    app:layout_constraintTop_toBottomOf="@+id/garis2" />
+
+                <TextView
+                    android:id="@+id/formPemesanana2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Detail Pembayaran"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="21dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/formPemesanana3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiket Anda"
+                    android:textColor="@color/titleBar"
+                    android:textSize="21dp"
+                    app:layout_constraintEnd_toEndOf="@+id/formPemesanana2"
+                    app:layout_constraintStart_toStartOf="@+id/formPemesanana2"
+                    app:layout_constraintTop_toBottomOf="@+id/formPemesanana2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/roundedcornertop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewFormDetailPemesanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="40dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/formPemesanana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Lengkapi Formulir Pemesanan"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="21dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiket"
+                        android:textColor="@color/titleBar"
+                        android:textSize="21dp"
+                        app:layout_constraintEnd_toEndOf="@+id/formPemesanana"
+                        app:layout_constraintStart_toStartOf="@+id/formPemesanana"
+                        app:layout_constraintTop_toBottomOf="@+id/formPemesanana" />
+
+                    <EditText
+                        android:id="@+id/namaPembeli"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/roundedcorner"
+                        android:gravity="center"
+                        android:hint="Nama Pemesanan"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <EditText
+                        android:id="@+id/noHpDetailPemesanan"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/roundedcorner"
+                        android:gravity="center"
+                        android:hint="No Handphone"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="@+id/namaPembeli"
+                        app:layout_constraintStart_toStartOf="@+id/namaPembeli"
+                        app:layout_constraintTop_toBottomOf="@+id/namaPembeli" />
+
+                    <EditText
+                        android:id="@+id/alamatDetailPemesanan"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/textarea"
+                        android:gravity="left"
+                        android:hint="Alamat"
+                        android:inputType="textMultiLine"
+                        android:padding="5dp"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="@+id/noHpDetailPemesanan"
+                        app:layout_constraintStart_toStartOf="@+id/noHpDetailPemesanan"
+                        app:layout_constraintTop_toBottomOf="@+id/noHpDetailPemesanan" />
+
+
+                    <Button
+                        android:id="@+id/btnPesanTiket"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btncolor"
+                        android:text="Pesan Tiket"
+                        android:textColor="@color/colorHint"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/alamatDetailPemesanan"
+                        app:layout_constraintStart_toStartOf="@+id/alamatDetailPemesanan"
+                        app:layout_constraintTop_toBottomOf="@+id/alamatDetailPemesanan" />
+
+                    <Button
+                        android:id="@+id/btnBatalPesanTiket"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/btnabuabu"
+                        android:text="Batal"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/btnPesanTiket"
+                        app:layout_constraintStart_toStartOf="@+id/btnPesanTiket"
+                        app:layout_constraintTop_toBottomOf="@+id/btnPesanTiket" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

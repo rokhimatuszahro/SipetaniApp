@@ -6,4 +6,214 @@
     android:layout_height="match_parent"
     tools:context=".Tiket">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/tiket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="150dp"
+        android:text="Tiket"
+        android:textColor="@color/titleBar"
+        android:textSize="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Anda"
+        android:textColor="@color/colorBlack"
+        android:textSize="21dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="225dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Pesan"
+                android:textColor="@color/colorHint"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintStart_toStartOf="@+id/guideline15"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="5dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/colorHint"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline15"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nama"
+                android:textColor="@color/colorHint"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline16"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Total"
+                android:textColor="@color/colorHint"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cetak"
+                android:textColor="@color/colorHint"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline18"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="30dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="220dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="290dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_begin="340dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="125dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/roundedcornertop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTiket"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tiketkosong"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedcornerwarning"
+        android:gravity="center|center_horizontal"
+        android:text="Anda tidak memiliki tiket"
+        android:textColor="@color/colorAccent"
+
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

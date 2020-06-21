@@ -1,9 +1,486 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailPemesanan">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/detailpemesanan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/juduldp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="Detail Pemesanan"
+            android:textColor="@color/colorBlack"
+            android:textSize="21dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/judukdp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiket"
+            android:textColor="@color/titleBar"
+            android:textSize="21dp"
+            app:layout_constraintEnd_toEndOf="@+id/juduldp"
+            app:layout_constraintTop_toBottomOf="@+id/juduldp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="40dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/detailPemesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Detail Pemesanan"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="21dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/developer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiket"
+                    android:textColor="@color/titleBar"
+                    android:textSize="21dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detailPemesanan" />
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="40dp"
+                    android:layout_height="19dp"
+                    android:text="Nama"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis6"
+                    app:layout_constraintStart_toStartOf="@+id/garis6"
+                    app:layout_constraintTop_toBottomOf="@+id/developer" />
+
+                <View
+                    android:id="@+id/garis6"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/developer" />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis7"
+                    app:layout_constraintStart_toStartOf="@+id/garis7"
+                    app:layout_constraintTop_toBottomOf="@+id/garis6" />
+
+                <View
+                    android:id="@+id/garis7"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="@+id/garis6"
+                    app:layout_constraintStart_toStartOf="@+id/garis6"
+                    app:layout_constraintTop_toBottomOf="@+id/garis6" />
+
+                <TextView
+                    android:id="@+id/nomorhp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Handphone"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis8"
+                    app:layout_constraintStart_toStartOf="@+id/garis8"
+                    app:layout_constraintTop_toBottomOf="@+id/garis7" />
+
+                <TextView
+                    android:id="@+id/isinama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="Matus"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis6"
+                    app:layout_constraintEnd_toEndOf="@+id/garis6"
+                    app:layout_constraintTop_toBottomOf="@+id/developer" />
+
+                <TextView
+                    android:id="@+id/isialamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="Jatilawang"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis7"
+                    app:layout_constraintEnd_toEndOf="@+id/garis7"
+                    app:layout_constraintTop_toBottomOf="@+id/garis6" />
+
+                <TextView
+                    android:id="@+id/isinomorhp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="082234028798"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis8"
+                    app:layout_constraintEnd_toEndOf="@+id/garis8"
+                    app:layout_constraintTop_toBottomOf="@+id/garis7" />
+
+                <View
+                    android:id="@+id/garis8"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="@+id/garis7"
+                    app:layout_constraintStart_toStartOf="@+id/garis7"
+                    app:layout_constraintTop_toBottomOf="@+id/garis7" />
+
+                <TextView
+                    android:id="@+id/tglPemesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Pemesanan"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis4"
+                    app:layout_constraintStart_toStartOf="@+id/garis4"
+                    app:layout_constraintTop_toBottomOf="@+id/garis8" />
+
+                <View
+                    android:id="@+id/garis4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="@+id/garis8"
+                    app:layout_constraintStart_toStartOf="@+id/garis8"
+                    app:layout_constraintTop_toBottomOf="@+id/garis8" />
+
+                <TextView
+                    android:id="@+id/jumlahTiket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Jumlah Tiket"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.074"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis4" />
+
+                <View
+                    android:id="@+id/garis5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="@+id/garis4"
+                    app:layout_constraintHorizontal_bias="0.55"
+                    app:layout_constraintStart_toStartOf="@+id/garis4"
+                    app:layout_constraintTop_toBottomOf="@+id/garis4" />
+
+                <TextView
+                    android:id="@+id/totalPembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Total Pembayaran"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/garis5"
+                    app:layout_constraintTop_toBottomOf="@+id/garis5" />
+
+                <TextView
+                    android:id="@+id/isiTglBerkunjung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="21 - Apr - 2020"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis4"
+                    app:layout_constraintEnd_toEndOf="@+id/garis4"
+                    app:layout_constraintTop_toBottomOf="@+id/garis8" />
+
+                <TextView
+                    android:id="@+id/isiJumTiket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="2 Tiket"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis5"
+                    app:layout_constraintEnd_toEndOf="@+id/garis5"
+                    app:layout_constraintTop_toBottomOf="@+id/garis4" />
+
+                <TextView
+                    android:id="@+id/isiTotPembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="IDR. 24.000"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintEnd_toEndOf="@+id/garis5"
+                    app:layout_constraintTop_toBottomOf="@+id/garis5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/roundedcornertop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="40dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/selamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Terima Kasih Telah"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="21dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.503"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/selamat1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Melakukan Pemesanan"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toEndOf="@+id/selamat"
+                        app:layout_constraintStart_toStartOf="@+id/selamat"
+                        app:layout_constraintTop_toBottomOf="@+id/selamat" />
+
+                    <TextView
+                        android:id="@+id/selamat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiket"
+                        android:textColor="@color/titleBar"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toStartOf="@+id/selamat1"
+                        app:layout_constraintTop_toBottomOf="@+id/selamat1" />
+
+                    <TextView
+                        android:id="@+id/selamat3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Bersama SIPetani"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/selamat2"
+                        app:layout_constraintStart_toEndOf="@+id/selamat2"
+                        app:layout_constraintTop_toTopOf="@+id/selamat2" />
+
+                    <TextView
+                        android:id="@+id/ket1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Silahkan Melakukan Pembayaran Tiket"
+                        android:textColor="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="@+id/selamat1"
+                        app:layout_constraintStart_toStartOf="@+id/selamat1"
+                        app:layout_constraintTop_toBottomOf="@+id/selamat3" />
+
+                    <TextView
+                        android:id="@+id/ket2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ke No. Rekening Berikut :"
+                        android:textColor="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="@+id/ket1"
+                        app:layout_constraintStart_toStartOf="@+id/ket1"
+                        app:layout_constraintTop_toBottomOf="@+id/ket1" />
+
+                    <TextView
+                        android:id="@+id/noRekening"
+                        android:layout_width="102dp"
+                        android:layout_height="34dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/roundedcorner2"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="123456789"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.495"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ket2" />
+
+                    <TextView
+                        android:id="@+id/ket3"
+                        android:layout_width="212dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Anda dapat Mencetak Tiket dan"
+                        android:textColor="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/noRekening" />
+
+                    <TextView
+                        android:id="@+id/ket4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Memesan kembali Setelah Mengunggah"
+                        android:textColor="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/ket3"
+                        app:layout_constraintTop_toBottomOf="@+id/ket3" />
+
+                    <TextView
+                        android:id="@+id/ket5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Bukti Pembayaran."
+                        android:textColor="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="@+id/ket4"
+                        app:layout_constraintTop_toBottomOf="@+id/ket4" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/wrapperbukti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/ket5"
+                        app:layout_constraintTop_toBottomOf="@+id/ket5">
+
+                        <ImageView
+                            android:id="@+id/imgUnggah"
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/uploadfoto"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iconUploadBukti"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:alpha="0.5"
+                            android:src="@drawable/camera"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Button
+                        android:id="@+id/btnUnggah"
+                        android:layout_width="79dp"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="32dp"
+                        android:background="@drawable/btncolor"
+                        android:text="Unggah"
+                        android:textColor="@color/colorHint"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/wrapperbukti"
+                        app:layout_constraintStart_toEndOf="@+id/wrapperbukti"
+                        app:layout_constraintTop_toTopOf="@+id/wrapperbukti" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
