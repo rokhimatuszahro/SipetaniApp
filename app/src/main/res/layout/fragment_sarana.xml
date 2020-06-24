@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SaranaFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/hijaugradient"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/sarana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="155dp"
+        android:text="SARANA"
+        android:textColor="@color/colorHint"
+        android:textSize="16dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/belajar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="60dp"
+        android:text="BELAJAR DAN REKREASI"
+        android:textColor="@color/colorBlack"
+        android:textSize="21dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSaranaBelajar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/belajar" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

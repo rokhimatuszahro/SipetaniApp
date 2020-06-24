@@ -1,9 +1,969 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profil">
+    tools:context=".Profil"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/detailpembayaran"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="90dp"
+            android:text="Info Akun"
+            android:textColor="@color/colorBlack"
+            android:textSize="21dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="40dp"
+            android:elevation="2dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Profil"
+                    android:textColor="@color/titleBar"
+                    android:textSize="21dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.409"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Anda"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="21dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgFotoProfil2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ftprofil"
+                    app:civ_border_color="@color/colorBlue"
+                    app:civ_border_width="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/garis11"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgFotoProfil2" />
+
+                <TextView
+                    android:id="@+id/emailProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Email"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis11" />
+
+                <TextView
+                    android:id="@+id/isiEmailProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="GoldenEagle@gmail.com"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis11" />
+
+                <TextView
+                    android:id="@+id/garis12"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis11" />
+
+                <TextView
+                    android:id="@+id/namaProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Nama"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis12" />
+
+                <TextView
+                    android:id="@+id/isiNamaProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="Golde Eagle"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis13"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis12" />
+
+                <TextView
+                    android:id="@+id/garis13"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis12" />
+
+                <TextView
+                    android:id="@+id/jenkelProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Jenis Kelamin"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/garis14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis13" />
+
+                <TextView
+                    android:id="@+id/isiJenkelProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="Perempuan"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toTopOf="@+id/garis14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis13" />
+
+                <TextView
+                    android:id="@+id/garis14"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/colorHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis13" />
+
+                <TextView
+                    android:id="@+id/pinProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="PIN"
+                    android:textColor="@color/colorHint"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis14" />
+
+                <TextView
+                    android:id="@+id/isiPinProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/roundedblue"
+                    android:padding="3dp"
+                    android:text="123"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis14" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/roundedcornertop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="400dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="40dp"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:text="Edit"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="21dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.424"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Profil"
+                        android:textColor="@color/titleBar"
+                        android:textSize="21dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/emailEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/roundedcorner"
+                        android:gravity="center"
+                        android:hint="GoldeEagle@gmail.com"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <EditText
+                        android:id="@+id/namaEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/roundedcorner"
+                        android:gravity="center"
+                        android:hint="GoldeEagle"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="@+id/emailEdit"
+                        app:layout_constraintStart_toStartOf="@+id/emailEdit"
+                        app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
+
+                    <EditText
+                        android:id="@+id/pinEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/roundedcorner"
+                        android:gravity="center"
+                        android:hint="123"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toEndOf="@+id/namaEdit"
+                        app:layout_constraintStart_toStartOf="@+id/namaEdit"
+                        app:layout_constraintTop_toBottomOf="@+id/namaEdit" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/wrappasslama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintEnd_toEndOf="@+id/pinEdit"
+                        app:layout_constraintStart_toStartOf="@+id/pinEdit"
+                        app:layout_constraintTop_toBottomOf="@+id/pinEdit"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/passLamaEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="@drawable/roundedcorner"
+                            android:hint="Password Lama"
+                            android:inputType="textPassword"
+                            android:padding="10dp"
+                            android:textColorHint="@color/colorHint"
+                            android:textSize="15dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/wrappassbaru"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintEnd_toEndOf="@+id/wrappasslama"
+                        app:layout_constraintStart_toStartOf="@+id/wrappasslama"
+                        app:layout_constraintTop_toBottomOf="@+id/wrappasslama"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/passBaruEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:background="@drawable/roundedcorner"
+                            android:hint="Password Baru"
+                            android:inputType="textPassword"
+                            android:padding="10dp"
+                            android:textColorHint="@color/colorHint"
+                            android:textSize="15dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Jenis Kelamin"
+                        android:textColor="@color/colorHint"
+                        app:layout_constraintStart_toStartOf="@+id/wrappassbaru"
+                        app:layout_constraintTop_toBottomOf="@+id/wrappassbaru" />
+
+                    <RadioGroup
+                        android:id="@+id/jenKelEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="@+id/textView12"
+                        app:layout_constraintTop_toBottomOf="@id/textView12">
+
+                        <RadioButton
+                            android:id="@+id/rblakilaki"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Laki - Laki"
+                            android:textColor="@color/colorHint" />
+
+                        <RadioButton
+                            android:id="@+id/rbperempuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Perempuan"
+                            android:textColor="@color/colorHint"
+                            tools:layout_editor_absoluteX="115dp"
+                            tools:layout_editor_absoluteY="3dp" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Foto Profil"
+                        android:textColor="@color/colorHint"
+                        app:layout_constraintStart_toStartOf="@+id/jenKelEdit"
+                        app:layout_constraintTop_toBottomOf="@+id/jenKelEdit" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@id/textView13">
+
+                        <ImageView
+                            android:id="@+id/imgFtProfil"
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/uploadfoto"
+                            android:clickable="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iconImageProfile"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:alpha="0.5"
+                            android:src="@drawable/camera"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Button
+                        android:id="@+id/btnEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btncolor"
+                        android:text="Edit Sekarang"
+                        android:textColor="@color/colorHint"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/wrappassbaru"
+                        app:layout_constraintStart_toStartOf="@+id/wrappassbaru"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginTop="220dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--<androidx.cardview.widget.CardView-->
+    <!--    android:id="@+id/cardView1"-->
+    <!--    android:layout_width="320dp"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:elevation="2dp"-->
+    <!--    app:cardBackgroundColor="@color/colorWhite"-->
+    <!--    app:cardCornerRadius="12dp"-->
+    <!--    app:cardElevation="2dp"-->
+    <!--    app:cardMaxElevation="2dp"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintHorizontal_bias="0.495"-->
+    <!--    app:layout_constraintStart_toStartOf="parent"-->
+    <!--    app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:paddingBottom="30dp">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView7"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="28dp"-->
+    <!--            android:text="Profil"-->
+    <!--            android:textColor="@color/titleBar"-->
+    <!--            android:textSize="21dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.409"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView9"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="5dp"-->
+    <!--            android:layout_marginTop="28dp"-->
+    <!--            android:text="Anda"-->
+    <!--            android:textColor="@color/colorBlack"-->
+    <!--            android:textSize="21dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/textView7"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--            android:id="@+id/imgFotoProfil2"-->
+    <!--            android:layout_width="100dp"-->
+    <!--            android:layout_height="100dp"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:src="@drawable/ftprofil"-->
+    <!--            app:civ_border_color="@color/colorBlue"-->
+    <!--            app:civ_border_width="3dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/garis11"-->
+    <!--            android:layout_width="290dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:background="@color/colorHint"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/imgFotoProfil2" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/emailProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="30dp"-->
+    <!--            android:text="Email"-->
+    <!--            android:textColor="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/garis12"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis11" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/isiEmailProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginRight="30dp"-->
+    <!--            android:background="@drawable/roundedblue"-->
+    <!--            android:padding="3dp"-->
+    <!--            android:text="GoldenEagle@gmail.com"-->
+    <!--            android:textColor="@color/colorWhite"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/garis12"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis11" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/garis12"-->
+    <!--            android:layout_width="290dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_marginTop="40dp"-->
+    <!--            android:background="@color/colorHint"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis11" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/namaProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="30dp"-->
+    <!--            android:text="Nama"-->
+    <!--            android:textColor="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/garis13"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis12" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/isiNamaProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginEnd="30dp"-->
+    <!--            android:background="@drawable/roundedblue"-->
+    <!--            android:padding="3dp"-->
+    <!--            android:text="Golde Eagle"-->
+    <!--            android:textColor="@color/colorWhite"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/garis13"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis12" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/garis13"-->
+    <!--            android:layout_width="290dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_marginTop="40dp"-->
+    <!--            android:background="@color/colorHint"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis12" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/jenkelProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="30dp"-->
+    <!--            android:text="Jenis Kelamin"-->
+    <!--            android:textColor="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/garis14"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis13" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/isiJenkelProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginEnd="30dp"-->
+    <!--            android:background="@drawable/roundedblue"-->
+    <!--            android:padding="3dp"-->
+    <!--            android:text="Perempuan"-->
+    <!--            android:textColor="@color/colorWhite"-->
+    <!--            app:layout_constraintBottom_toTopOf="@+id/garis14"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis13" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/garis14"-->
+    <!--            android:layout_width="290dp"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_marginTop="40dp"-->
+    <!--            android:background="@color/colorHint"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis13" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/pinProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="30dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:text="PIN"-->
+    <!--            android:textColor="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis14" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/isiPinProfil"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:layout_marginEnd="30dp"-->
+    <!--            android:background="@drawable/roundedblue"-->
+    <!--            android:padding="3dp"-->
+    <!--            android:text="123"-->
+    <!--            android:textColor="@color/colorWhite"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/garis14" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</androidx.cardview.widget.CardView>-->
+
+    <!--<androidx.cardview.widget.CardView-->
+    <!--    android:id="@+id/cardView2"-->
+    <!--    android:layout_width="320dp"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_marginTop="40dp"-->
+    <!--    android:layout_marginBottom="40dp"-->
+    <!--    android:elevation="2dp"-->
+    <!--    app:cardBackgroundColor="@color/colorWhite"-->
+    <!--    app:cardCornerRadius="12dp"-->
+    <!--    app:cardElevation="2dp"-->
+    <!--    app:cardMaxElevation="2dp"-->
+    <!--    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintHorizontal_bias="0.495"-->
+    <!--    app:layout_constraintStart_toStartOf="parent"-->
+    <!--    app:layout_constraintTop_toBottomOf="@id/cardView1">-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:paddingBottom="30dp">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView11"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="28dp"-->
+    <!--            android:text="Edit"-->
+    <!--            android:textColor="@color/colorBlack"-->
+    <!--            android:textSize="21dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.424"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView4"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="5dp"-->
+    <!--            android:layout_marginTop="28dp"-->
+    <!--            android:text="Profil"-->
+    <!--            android:textColor="@color/titleBar"-->
+    <!--            android:textSize="21dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/textView11"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/emailEdit"-->
+    <!--            android:layout_width="260dp"-->
+    <!--            android:layout_height="38dp"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:background="@drawable/roundedcorner"-->
+    <!--            android:gravity="center"-->
+    <!--            android:hint="GoldeEagle@gmail.com"-->
+    <!--            android:inputType="textEmailAddress"-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textColorHint="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/namaEdit"-->
+    <!--            android:layout_width="260dp"-->
+    <!--            android:layout_height="38dp"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:background="@drawable/roundedcorner"-->
+    <!--            android:gravity="center"-->
+    <!--            android:hint="GoldeEagle"-->
+    <!--            android:inputType="text"-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textColorHint="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/emailEdit" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/pinEdit"-->
+    <!--            android:layout_width="260dp"-->
+    <!--            android:layout_height="38dp"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:background="@drawable/roundedcorner"-->
+    <!--            android:gravity="center"-->
+    <!--            android:hint="123"-->
+    <!--            android:inputType="number"-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textColorHint="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/namaEdit" />-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/wrappasslama"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/pinEdit"-->
+    <!--            app:passwordToggleEnabled="true">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:id="@+id/passLamaEdit"-->
+    <!--                android:layout_width="260dp"-->
+    <!--                android:layout_height="38dp"-->
+    <!--                android:background="@drawable/roundedcorner"-->
+    <!--                android:hint="Password Lama"-->
+    <!--                android:inputType="textPassword"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:textColorHint="@color/colorHint"-->
+    <!--                android:textSize="15dp" />-->
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/wrappassbaru"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/wrappasslama"-->
+    <!--            app:passwordToggleEnabled="true">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:id="@+id/passBaruEdit"-->
+    <!--                android:layout_width="260dp"-->
+    <!--                android:layout_height="38dp"-->
+    <!--                android:background="@drawable/roundedcorner"-->
+    <!--                android:hint="Password Baru"-->
+    <!--                android:inputType="textPassword"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:textColorHint="@color/colorHint"-->
+    <!--                android:textSize="15dp" />-->
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView12"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="30dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:text="Jenis Kelamin"-->
+    <!--            android:textColor="@color/colorHint"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.099"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/wrappassbaru" />-->
+
+    <!--        <RadioGroup-->
+    <!--            android:id="@+id/jenKelEdit"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="30dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.245"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/textView12">-->
+
+    <!--            <RadioButton-->
+    <!--                android:id="@+id/rblakilaki"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:checked="false"-->
+    <!--                android:text="Laki - Laki"-->
+    <!--                android:textColor="@color/colorHint" />-->
+
+    <!--            <RadioButton-->
+    <!--                android:id="@+id/rbperempuan"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="15dp"-->
+    <!--                android:text="Perempuan"-->
+    <!--                android:textColor="@color/colorHint"-->
+    <!--                tools:layout_editor_absoluteX="115dp"-->
+    <!--                tools:layout_editor_absoluteY="3dp" />-->
+
+    <!--        </RadioGroup>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView13"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="30dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:text="Foto Profil"-->
+    <!--            android:textColor="@color/colorHint"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.099"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/jenKelEdit" />-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/constraintLayout2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginStart="50dp"-->
+    <!--            android:layout_marginTop="12dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/textView13">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imgFtProfil"-->
+    <!--                android:layout_width="100dp"-->
+    <!--                android:layout_height="100dp"-->
+    <!--                android:background="@drawable/uploadfoto"-->
+    <!--                android:clickable="true"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="25dp"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:alpha="0.5"-->
+    <!--                android:src="@drawable/camera"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnEdit"-->
+    <!--            android:layout_width="260dp"-->
+    <!--            android:layout_height="38dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:layout_marginBottom="10dp"-->
+    <!--            android:background="@drawable/btncolor"-->
+    <!--            android:text="Edit Sekarang"-->
+    <!--            android:textColor="@color/colorHint"-->
+    <!--            android:textSize="15dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</androidx.cardview.widget.CardView>-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
