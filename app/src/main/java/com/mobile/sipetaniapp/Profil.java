@@ -1,23 +1,47 @@
 package com.mobile.sipetaniapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
+import android.util.Patterns;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.mobile.sipetaniapp.Helper.SharedPreferenceHelper;
+import com.mobile.sipetaniapp.Until.AppController;
+import com.mobile.sipetaniapp.Until.ServerAPI;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Profil extends AppCompatActivity {
+public class
+Profil extends AppCompatActivity {
 
     private String gambar = "";
     TextView email, nama, pin, jenkel;
@@ -337,7 +361,5 @@ public class Profil extends AppCompatActivity {
         }
         return Bitmap.createScaledBitmap(image, width, height, true);
     }
-}
 
-    }
 }
