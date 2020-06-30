@@ -1,4 +1,4 @@
-package com.mobile.sipetani;
+package com.mobile.sipetaniapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.mobile.sipetani.Helper.SharedPreferenceHelper;
+import com.mobile.sipetaniapp.Helper.SharedPreferenceHelper;
+import com.mobile.sipetaniapp.Helper.SharedPreferenceHelper;
 
 public class Navigation extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.mobile.sipetani;
+package com.mobile.sipetaniapp;
 
         import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ package com.mobile.sipetani;
         import android.widget.ImageView;
         import android.widget.LinearLayout;
         import android.widget.TextView;
+
+        import com.mobile.sipetaniapp.R;
 
 public class SplashScreen extends AppCompatActivity {
 
